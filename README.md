@@ -15,6 +15,6 @@ The "Clear" button under the "Annotate" button will clear all annotations for a 
 
 The number of frames is displayed in the bottom left.
 
-The current fram is displayed in the bottom right. The current frame can be changed by either using the slider at the bottom, or by entering the desired frame in the text field in the bottom right and pressing the "Update" button.
+The current frame is displayed in the bottom right. The current frame can be changed by either using the slider at the bottom, or by entering the desired frame in the text field in the bottom right and pressing the "Update" button.
 
-It is bes to have each video file in a separate folder as the annotations will be saved in the same folder as the video file.
+It is best to have each video file in a separate folder as the annotations will be saved in the same folder as the video file.
