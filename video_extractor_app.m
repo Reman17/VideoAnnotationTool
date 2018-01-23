@@ -163,7 +163,7 @@ if(file ~= 0)
     data.name = name_split(1);
     
     %Create VideoReader object
-    data.v = VideoReader(file);
+    data.v = VideoReader(strcat(data.path,file));
 
     %Create array containing all frames
     data.video = read(data.v,[1,Inf]);
