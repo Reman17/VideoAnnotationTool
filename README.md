@@ -11,7 +11,7 @@ The "Save" button in the middle right must be used to save annotations, if a new
 
 The "Annotate" button at the top right creates a pen tool so the user can make an annotation. Just right-click to finish each annotation.
 
-The "Clear" button under the "Annotate" button will clear all annotations for a selected frame.
+The "Clear" button under the "Annotate" button will clear all annotations for a selected frame as well as delete any associated files.
 
 The number of frames is displayed in the bottom left.
 
