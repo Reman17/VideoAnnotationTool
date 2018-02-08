@@ -289,11 +289,35 @@ set(handles.pushbutton1, 'UserData', data1);
 function pushbutton8_Callback(hObject, eventdata, handles)
 % hObject    handle to pushbutton8 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
+% h%Get UserData for pushbutton1 anf slider1
+data1 = get(handles.pushbutton1, 'UserData');
+data2 = get(handles.slider1, 'UserData');
+
+%Save cell array in .mat file using frame number for name
+filename = strcat(data1.path,num2str(data2.current_frame));
+filename = strcat(filename, '.mat');
+
+%Create name for .png files using video file name and frame number
+png_name = strcat(data1.path,data1.name{1});
+png_name = strcat(png_name, '_');
+png_name = strcat(png_name,num2str(data2.current_frame));
+
+%Create name for image and mask file
+image_name = strcat(png_name,'_image');
+image_name = strcat(image_name, '.png');
+mask_name = strcat(png_name,'_mask');
+mask_name = strcat(mask_name, '.png');
 
 %Find all impoly objects on axes and delete them
 h = findall(gca, 'Tag', 'impoly');
 delete(h);
+
+%Delete images and mat files if they exist
+if(exist(image_name)>0)
+delete(image_name);
+delete(mask_name);
+delete(filename);
+end
 
 %Update button
 % --- Executes on button press in pushbutton9.
